@@ -5,6 +5,8 @@ Imports System.Net
 Namespace Controllers
     Public Class GlobalVariables
         Public Shared Role As String
+        Public Shared Company As String = ConfigurationManager.AppSettings("CNS_CompanyName")
+        Public Shared URLString As String = ConfigurationManager.AppSettings("CNS_ServerURL")
     End Class
 
     Public Class AccountController
@@ -58,7 +60,7 @@ Namespace Controllers
 
         Private Sub CheckPassword(user As String, pass As String)
             GlobalVariables.Role = "No User"
-            Dim api As New MIAPI(Nothing, ConfigurationManager.AppSettings("CNS_CompanyName"), user.ToUpper(), pass, False)
+            Dim api As New MIAPI(GlobalVariables.URLString, GlobalVariables.Company, user.ToUpper(), pass, False)
             Dim loggedOn As Boolean = api.Logon()
             If loggedOn Then
                 GlobalVariables.Role = ReturnRole(user)
