@@ -19,7 +19,7 @@ Public Module BundleConfig
                   "~/Scripts/bootstrap.js"))
 
         bundles.Add(New StyleBundle("~/Content/css").Include(
-                  "~/Content/bootstrap.css",
+                  "~/Content/bootstrap-Cerulean.css",
                   "~/Content/site.css"))
     End Sub
 End Module
