@@ -95,5 +95,5 @@ End Code
 End Using
 
     <div>
-        @Html.ActionLink("Cancel - Back to List", "MO", New With {.Start_Date = "2010-01-01", .End_Date = "2099-12-31"})
+        @Html.ActionLink("Cancel - Back to List", "MO")
     </div>
