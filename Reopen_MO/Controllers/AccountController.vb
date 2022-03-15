@@ -89,7 +89,7 @@ Namespace Controllers
                 Dim hashBytes As Byte() = hashType.ComputeHash(convertedToBytes)
                 MISysPwd = Convert.ToBase64String(hashBytes)
 
-                If (usrPwd = MISysPwd Or usrPwd = MISysPwd.Split(":=")(1)) Then
+                If (usrPwd = MISysPwd Or usrPwd.Split(New String() {"=:"}, StringSplitOptions.RemoveEmptyEntries)(1) = MISysPwd) Then
                     GlobalVariables.Role = ReturnRole(user)
                 End If
             End If
