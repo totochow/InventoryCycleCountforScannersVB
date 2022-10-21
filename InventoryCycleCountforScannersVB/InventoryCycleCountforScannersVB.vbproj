@@ -57,23 +57,23 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="MILANGENG, Version=6.4.5.3, Culture=neutral, PublicKeyToken=0941ff6a8542e0fa, processorArchitecture=MSIL">
+    <Reference Include="MILANGENG, Version=6.4.6.1, Culture=neutral, PublicKeyToken=0941ff6a8542e0fa, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\Program Files (x86)\MISys\MISys SBM\MISys SBM 6.4 Client\MILANGENG.dll</HintPath>
     </Reference>
-    <Reference Include="MIStandardTableDefs, Version=6.4.5.3, Culture=neutral, PublicKeyToken=0941ff6a8542e0fa, processorArchitecture=MSIL">
+    <Reference Include="MIStandardTableDefs, Version=6.4.6.1, Culture=neutral, PublicKeyToken=0941ff6a8542e0fa, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\Program Files (x86)\MISys\MISys SBM\MISys SBM 6.4 Client\MIStandardTableDefs.dll</HintPath>
     </Reference>
-    <Reference Include="MISys.API, Version=6.4.5.3, Culture=neutral, PublicKeyToken=0941ff6a8542e0fa, processorArchitecture=MSIL">
+    <Reference Include="MISys.API, Version=6.4.6.1, Culture=neutral, PublicKeyToken=0941ff6a8542e0fa, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\Program Files (x86)\MISys\MISys SBM\MISys SBM 6.4 Client\MISys.API.dll</HintPath>
     </Reference>
-    <Reference Include="MISys.ClientGlobals, Version=6.4.5.3, Culture=neutral, PublicKeyToken=0941ff6a8542e0fa, processorArchitecture=MSIL">
+    <Reference Include="MISys.ClientGlobals, Version=6.4.6.1, Culture=neutral, PublicKeyToken=0941ff6a8542e0fa, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\Program Files (x86)\MISys\MISys SBM\MISys SBM 6.4 Client\MISys.ClientGlobals.dll</HintPath>
     </Reference>
-    <Reference Include="MISys.TblSpecificClasses, Version=6.4.5.3, Culture=neutral, PublicKeyToken=0941ff6a8542e0fa, processorArchitecture=MSIL">
+    <Reference Include="MISys.TblSpecificClasses, Version=6.4.6.1, Culture=neutral, PublicKeyToken=0941ff6a8542e0fa, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\Program Files (x86)\MISys\MISys SBM\MISys SBM 6.4 Client\MISys.TblSpecificClasses.dll</HintPath>
     </Reference>
@@ -185,6 +185,9 @@
     </Compile>
     <Compile Include="Models\AccountViewModels.vb" />
     <Compile Include="Models\MIMOH.vb" />
+    <Compile Include="Models\MIPIBD.vb" />
+    <Compile Include="Models\MIPIBDD.vb" />
+    <Compile Include="Models\MIPIBH.vb" />
     <Compile Include="Models\MIUSER.vb" />
     <Compile Include="Models\IdentityModels.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -245,10 +248,8 @@
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
     <Content Include="Views\Account\Index.vbhtml" />
-    <Content Include="Views\Account\MO.vbhtml" />
-    <Content Include="Views\Account\Confirm_Change.vbhtml" />
-    <Content Include="Views\Account\ChangeStatus.vbhtml" />
     <Content Include="Views\Account\ErrorLogin.vbhtml" />
+    <Content Include="Views\Home\CountBatch.vbhtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
@@ -270,8 +271,8 @@
     </Content>
     <Content Include="Content\Site.css" />
     <Content Include="Views\_ViewStart.vbhtml" />
-    <Content Include="Views\Home\About.vbhtml" />
-    <Content Include="Views\Home\Contact.vbhtml" />
+    <Content Include="Views\Account\About.vbhtml" />
+    <Content Include="Views\Account\Contact.vbhtml" />
     <Content Include="Views\Home\Index.vbhtml" />
     <Content Include="Views\Shared\Error.vbhtml" />
     <Content Include="Views\Shared\_Layout.vbhtml" />

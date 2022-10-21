@@ -18,5 +18,7 @@ Public Class CompanyDbContext
     End Function
     Public Overridable Property MIUSERs As DbSet(Of MIUSER)
     Public Overridable Property MIMOHs As DbSet(Of MIMOH)
+    Public Overridable Property MIPIBHs As DbSet(Of MIPIBH)
+    Public Overridable Property MIPIBDs As DbSet(Of MIPIBD)
 End Class
 

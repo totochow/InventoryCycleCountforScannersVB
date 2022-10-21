@@ -16,27 +16,39 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("MO Re-open App", "Index", "Home", New With {.area = ""}, New With {.class = "navbar-brand"})
+                @Html.ActionLink("Inventory Cycle Count", "Index", "Home", New With {.area = ""}, New With {.class = "navbar-brand"})
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
+                @If (ViewBag.LoggedInName IsNot Nothing) Then
+                    @<ul Class="nav navbar-nav">
+                        @*<li>@Html.ActionLink("Home", "Index", "Home")</li>*@
+                        <li>@Html.ActionLink("View Batches", "AddCount", "Home")</li>
+                        @*<li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
+                    </ul>
+
+                    @Using Html.BeginForm("LogOff", "Account", FormMethod.Post, New With {.class = "navbar-collapse collapse", .align = "Right", .style = "padding-top:10px", .role = "form"})
+                        @Html.AntiForgeryToken()
+
+                    @<form class="navbar-collapse collapse" align="Right" style="padding-top:10px">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" >LOGOUT</button>
+                    </form>
+                    End Using
+                End If
             </div>
         </div>
-    </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Central Nervous Systems</p>
-        </footer>
-    </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required:=False)
-</body>
-</html>
+        </div>
+        <div class="container body-content">
+            @RenderBody()
+            <hr />
+            <footer>
+                <p>&copy; @DateTime.Now.Year - Central Nervous Systems</p>
+            </footer>
+        </div>
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required:=False)
+
+        </body>
+        </html>
